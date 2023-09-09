@@ -1,0 +1,183 @@
+        /* Reset some default styles for better mobile compatibility */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        /* Main container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: unset;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+            flex: 1;
+        }
+
+        .header .logo {
+            max-width: 60px; /* Adjust the logo width as needed */
+            margin-right: 10px; /* Add some spacing between the logo and text */
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* Search bar styles */
+        .search-bar {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the search bar horizontally */
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 300px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        /* Right side links styles */
+        .right-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-links a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: 100;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+            height: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        /* Dropdown styles */
+        .dropdown-content {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+        .dropdown-icon {
+            display: inline-block;
+            margin-right: 8px; /* Adjust as needed for spacing */
+        }
+
+        /* Main content styles */
+        .main-content {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr; /* Sidebar on the left, Text in the middle, Info Box on the right */
+            grid-gap: 20px;
+            font-size: 14px; /* Set the font size to match Wikipedia */
+        }
+
+        .main-content h1 {
+            font-size: 28px;
+        }
+
+        .main-content p {
+            line-height: 1.5;
+        }
+
+        /* Info Box styles */
+        .info-box {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .info-box h2 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        /* Center the image within the info box */
+        .info-box img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Position the info box on the right */
+        @media screen and (min-width: 768px) {
+            .info-box {
+                grid-column: 3; /* Display info box as the third column */
+            }
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .search-input {
+                max-width: 100%;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
